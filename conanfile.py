@@ -22,8 +22,7 @@ class GtestConan(NxConanFile):
 
     def do_build(self):
         cmake = CMake(self)
-        cmake.build_dir = "{staging_dir}/src".format(staging_dir=self.staging_dir)
-        tools.untargz("gtest-{v}.tar.gz".format(v=self.version), cmake.build_dir)
+        tools.untargz("gtest-{v}.tar.gz".format(v=self.version))
         cmake.configure(defs={
                 "BUILD_GTEST":"1",
                 "BUILD_GMOCK":"1" if self.options.with_gmock else "0",
