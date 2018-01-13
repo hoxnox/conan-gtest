@@ -34,5 +34,5 @@ class GtestConan(NxConanFile):
         cmake.build(target="install")
 
     def do_package_info(self):
-            self.cpp_info.libs = ["gtest", "gtest_main"]
+        self.cpp_info.libs = ["gtest", "gtest_main"]
 
