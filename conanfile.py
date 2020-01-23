@@ -4,7 +4,7 @@ from conans import CMake,tools
 
 class GtestConan(NxConanFile):
     name = "gtest"
-    version = "1.8.0"
+    version = "1.10.0"
     license = "https://raw.githubusercontent.com/google/googletest/master/googletest/LICENSE"
     url = "https://github.com/hoxnox/conan-gtest"
     settings = "os", "compiler", "build_type", "arch"
@@ -14,7 +14,7 @@ class GtestConan(NxConanFile):
     description = "Google testing framework."
 
     def do_source(self):
-        self.retrieve("58a6f4277ca2bc8565222b3bbd58a177609e9c488e8a72649359ba51450db7d8",
+        self.retrieve("9dc9157a9a1551ec7a7e43daea9a694a0bb5fb8bec81235d8a1e6ef64c716dcb",
                 [
                     "vendor://google/googletest/googletest-release-{v}.tar.gz".format(v=self.version),
                     "https://github.com/google/googletest/archive/release-{v}.tar.gz".format(v=self.version)
